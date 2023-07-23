@@ -30,10 +30,10 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Fantasy football application"),
-        backgroundColor: Colors.amber,
-      ),
+      // appBar: AppBar(
+      //   title: const Text("Fantasy football application"),
+      //   backgroundColor: Colors.amber,
+      // ),
       body: Center(
         child: _widgetOptions[_selectedIndex],
       ),
