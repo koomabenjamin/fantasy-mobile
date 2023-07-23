@@ -1,3 +1,4 @@
+import 'package:fantasy/screens/match_card.dart';
 import 'package:fantasy/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -81,6 +82,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ]),
           ),
+          MatchCard()
         ],
       ),
     );
