@@ -1,4 +1,5 @@
 import 'package:fantasy/screens/match_card.dart';
+import 'package:fantasy/utils/data/matches_fixutres.dart';
 import 'package:fantasy/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -82,7 +83,12 @@ class HomeScreen extends StatelessWidget {
               ),
             ]),
           ),
-          MatchCard()
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: matchFixtures.map((match) => MatchCard(match: match)).toList(),
+            ),
+          ),
         ],
       ),
     );

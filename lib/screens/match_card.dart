@@ -3,19 +3,21 @@ import 'package:fantasy/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class MatchCard extends StatelessWidget {
-  const MatchCard({super.key});
+  final Map<String, dynamic> match;
+  const MatchCard({Key? key, required this.match}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return SizedBox(
-      width: size.width,
-      height: 200,
+      width: size.width - 20,
+      height: 190,
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white54,
           borderRadius: BorderRadius.circular(10),
         ),
+        margin: const EdgeInsets.only(right: 2, left: 10),
         padding: EdgeInsets.all(10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,9 +26,14 @@ class MatchCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Time:", style: Styles.textSmBlack),
-                Text("Win probability:", style: Styles.textSmBlack),
-                Text("Date:", style: Styles.textSmBlack),
+                Text("Time: ${match['matchTime']}", style: Styles.textSmBlack),
+                Text("Date: ${match['matchDay']}", style: Styles.textSmBlack),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Win probability: ${match['matchProbability']}", style: Styles.textSmBlack),
               ],
             ),
             // TODO: Row for Teams information
@@ -34,34 +41,35 @@ class MatchCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 // Image.asset(
-                //     "assets/images/teams/afc_bournemouth_logo_480x480.png"),
+                //     "assets/images/teams/afc_bournemouth_logo_490x490.png"),
                 // Image.asset(
-                //     "assets/images/teams/Manchester-United-FC-logo-480x480.png"),
+                //     "assets/images/teams/Manchester-United-FC-logo-490x490.png"),
                 Container(
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     border: const Border(),
-                    image: const DecorationImage(
+                    image:  DecorationImage(
                       fit: BoxFit.fitHeight,
-                      image: AssetImage(
-                          "assets/images/teams/afc_bournemouth_logo_480x480.png"),
+                      image: AssetImage("assets/images/teams/${match['matchTeamsLogos']['team']}"),
                     ),
                   ),
                 ),
                 Container(
-                  child: Text("Vs", style: Styles.textLg,),
+                  child: Text(
+                    "Vs",
+                    style: Styles.textLg,
+                  ),
                 ),
                 Container(
-                  width: 100,
-                  height: 100,
+                  width: 90,
+                  height: 90,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    image: const DecorationImage(
+                    image: DecorationImage(
                       fit: BoxFit.fitHeight,
-                      image: AssetImage(
-                          "assets/images/teams/Manchester-United-FC-logo-480x480.png"),
+                      image: AssetImage("assets/images/teams/${match['matchTeamsLogos']['opponent']}"),
                     ),
                   ),
                 ),
