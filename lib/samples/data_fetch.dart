@@ -40,42 +40,52 @@ class Album {
   }
 }
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class DataFetch extends StatefulWidget {
+  const DataFetch({super.key});
 
   @override
-  State<MyApp> createState() {
+  State<DataFetch> createState() {
     return _MyAppState();
   }
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<DataFetch> {
   final TextEditingController _controller = TextEditingController();
   Future<Album>? _futureAlbum;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Create Data Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Create Data Example'),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Create Data Example'),
-        ),
-        body: Container(
-          alignment: Alignment.center,
-          padding: const EdgeInsets.all(8),
-          child: (_futureAlbum == null) ? buildColumn() : buildFutureBuilder(),
-        ),
+      body: Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(8),
+        child: (_futureAlbum == null) ? buildColumn() : buildFutureBuilder(),
       ),
     );
   }
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //     title: 'Create Data Example',
+  //     theme: ThemeData(
+  //       primarySwatch: Colors.blue,
+  //     ),
+  //     home: Scaffold(
+  //       appBar: AppBar(
+  //         title: const Text('Create Data Example'),
+  //       ),
+  //       body: Container(
+  //         alignment: Alignment.center,
+  //         padding: const EdgeInsets.all(8),
+  //         child: (_futureAlbum == null) ? buildColumn() : buildFutureBuilder(),
+  //       ),
+  //     ),
+  //   );
+  // }
 
   Column buildColumn() {
     return Column(

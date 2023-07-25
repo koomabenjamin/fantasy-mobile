@@ -1,3 +1,4 @@
+import 'package:fantasy/samples/data_fetch.dart';
 import 'package:fantasy/screens/home_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _BottomBarState extends State<BottomBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const Text("Search"),
+    const DataFetch(),
     const Text("Play"),
     const Text("Profile"),
     const Text("Settings"),
@@ -48,15 +49,29 @@ class _BottomBarState extends State<BottomBar> {
         unselectedItemColor: const Color(0xff526480),
         items: const [
           BottomNavigationBarItem(
-              icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
-              activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
-              label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
+            icon: Icon(Icons.home),
+            activeIcon: Icon(Icons.home_filled),
+            label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.sports_soccer), label: "Play"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+            icon: Icon(Icons.search_outlined),
+            label: "Search",
+            activeIcon: Icon(Icons.search),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.settings), label: "Settings"),
+            icon: Icon(Icons.sports_soccer_outlined),
+            label: "Play",
+            activeIcon: Icon(Icons.sports_soccer),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outline),
+            label: "Profile",
+            activeIcon: Icon(Icons.person),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings_outlined),
+            label: "Settings",
+            activeIcon: Icon(Icons.settings),
+          ),
         ],
       ),
     );
