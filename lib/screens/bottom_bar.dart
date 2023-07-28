@@ -58,9 +58,9 @@ class _BottomBarState extends State<BottomBar> {
             activeIcon: Icon(Icons.search),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.sports_soccer_outlined),
+            icon: Icon(Icons.newspaper_outlined),
             label: "Play",
-            activeIcon: Icon(Icons.sports_soccer),
+            activeIcon: Icon(Icons.newspaper_sharp),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),

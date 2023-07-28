@@ -1,4 +1,5 @@
 import 'package:fantasy/screens/match_card.dart';
+import 'package:fantasy/screens/match_today_card.dart';
 import 'package:fantasy/utils/data/matches_fixutres.dart';
 import 'package:fantasy/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -86,7 +87,29 @@ class HomeScreen extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: matchFixtures.map((match) => MatchCard(match: match)).toList(),
+              children: matchFixtures
+                  .map((match) => MatchCard(match: match))
+                  .toList(),
+            ),
+          ),
+          const Gap(10),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Matches today", style: Styles.textBase), 
+                Text('view all...', style: Styles.textSm.copyWith(color: Colors.amber[300])), 
+                ],
+            ),
+          ),
+          const Gap(10),
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: matchFixtures
+                  .map((match) => MatchTodayCard(match: match))
+                  .toList(),
             ),
           ),
         ],
