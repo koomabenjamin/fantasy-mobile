@@ -1,5 +1,6 @@
 import 'package:fantasy/samples/data_fetch.dart';
 import 'package:fantasy/screens/home_screen.dart';
+import 'package:fantasy/screens/player_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
@@ -22,7 +23,7 @@ class _BottomBarState extends State<BottomBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const DataFetch(),
+    const PlayerScreen(),
     const Text("Play"),
     const Text("Profile"),
     const Text("Settings"),
