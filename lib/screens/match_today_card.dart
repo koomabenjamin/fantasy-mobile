@@ -8,8 +8,8 @@ class MatchTodayCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(3.0),
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.all(3.0),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       // decoration: BoxDecoration(
       //   boxShadow: 
       // ),
@@ -56,7 +56,7 @@ class MatchTodayCard extends StatelessWidget {
                   SizedBox(
                     width: 50,
                     child: Container(
-                      padding: EdgeInsets.all(5.0),
+                      padding: const EdgeInsets.all(5.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Colors.greenAccent[400]

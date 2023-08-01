@@ -1,6 +1,5 @@
 import 'package:fantasy/samples/data_fetch.dart';
 import 'package:fantasy/screens/home_screen.dart';
-import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
