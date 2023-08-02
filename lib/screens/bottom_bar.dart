@@ -1,5 +1,9 @@
 import 'package:fantasy/samples/data_fetch.dart';
 import 'package:fantasy/screens/home_screen.dart';
+import 'package:fantasy/screens/newfeed_screen.dart';
+import 'package:fantasy/screens/profile_screen.dart';
+import 'package:fantasy/screens/search_screen.dart';
+import 'package:fantasy/screens/settings_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -23,10 +27,10 @@ class _BottomBarState extends State<BottomBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const DataFetch(),
-    const Text("Play"),
-    const Text("Profile"),
-    const Text("Settings"),
+    const SearchScreen(),
+    const NewsFeedScreen(),
+    const ProfileScreen(),
+    const SettingsScreen(),
   ];
   @override
   Widget build(BuildContext context) {

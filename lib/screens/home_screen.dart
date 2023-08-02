@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[500],
+      backgroundColor: Colors.pink[900],
       body: ListView(
         children: [
           Container(
@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                     height: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         fit: BoxFit.fitHeight,
                         image: AssetImage("assets/images/logo.png"),
                       ),
@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
               ),
               const Gap(20),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
