@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Upcoming Matches..",
+                    "Upcoming Matches...",
                     style: Styles.textBase,
                   ),
                   InkWell(
@@ -84,6 +84,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ]),
           ),
+          
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -92,6 +93,7 @@ class HomeScreen extends StatelessWidget {
                   .toList(),
             ),
           ),
+          
           const Gap(10),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10),

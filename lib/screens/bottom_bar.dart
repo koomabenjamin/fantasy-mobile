@@ -1,6 +1,7 @@
 import 'package:fantasy/samples/data_fetch.dart';
 import 'package:fantasy/screens/home_screen.dart';
 import 'package:fantasy/screens/newfeed_screen.dart';
+import 'package:fantasy/screens/player_screen.dart';
 import 'package:fantasy/screens/profile_screen.dart';
 import 'package:fantasy/screens/search_screen.dart';
 import 'package:fantasy/screens/settings_screen.dart';
@@ -27,7 +28,7 @@ class _BottomBarState extends State<BottomBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const SearchScreen(),
+    const PlayerScreen(),
     const NewsFeedScreen(),
     const ProfileScreen(),
     const SettingsScreen(),
