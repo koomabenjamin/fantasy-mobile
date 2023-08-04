@@ -10,12 +10,10 @@ class PlayerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(vertical: 2, horizontal: 5),
       padding: EdgeInsets.all(10),
       decoration: const BoxDecoration(
-        color: Colors.white70,
-        border: Border(
-          bottom: BorderSide(color: Color(0xFF7F7F7F)),
-        ),
+        color: Colors.white,
       ),
       child: Row(
         children: [
@@ -25,7 +23,7 @@ class PlayerCard extends StatelessWidget {
             width: 100,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: Colors.white, width: 5),
+              border: Border.all(color: Colors.amber, width: 5),
               image: const DecorationImage(
                 fit: BoxFit.fitHeight,
                 image: AssetImage("assets/images/logo.png"),
@@ -63,7 +61,7 @@ class PlayerCard extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.amber[900],
               borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: Colors.white, width: 5),
+              border: Border.all(color: Colors.black, width: 5),
             ),
           ),
         ],

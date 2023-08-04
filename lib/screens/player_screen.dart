@@ -81,6 +81,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
               ),
             ]),
           ),
+          
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
