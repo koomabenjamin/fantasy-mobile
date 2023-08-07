@@ -47,7 +47,7 @@ class NewsFeedCard extends StatelessWidget {
                               .copyWith(color: Colors.blue[800], fontSize: 14)),
                     ],
                   ),
-                  Text("widget"),
+                  const Text("widget"),
                 ],
               ),
             ],
