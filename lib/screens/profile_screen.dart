@@ -62,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(2)),
                 ),
               ),
-              child: const Text('Elevated Button'),
+              child: const Text('Update Personal Info'),
             ),
           ],
         ),
