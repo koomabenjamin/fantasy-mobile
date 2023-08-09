@@ -76,6 +76,7 @@ class NewsFeedScreen extends StatelessWidget {
               ),
             ]),
           ),
+          
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(

@@ -4,7 +4,7 @@ import 'package:fantasy/screens/newfeed_screen.dart';
 import 'package:fantasy/screens/player_screen.dart';
 import 'package:fantasy/screens/profile_screen.dart';
 import 'package:fantasy/screens/search_screen.dart';
-import 'package:fantasy/screens/settings_screen.dart';
+import 'package:fantasy/screens/settings/settings_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +31,7 @@ class _BottomBarState extends State<BottomBar> {
     const PlayerScreen(),
     const NewsFeedScreen(),
     const ProfileScreen(),
-    const SettingsScreen(),
+    const SettingScreen(),
   ];
   @override
   Widget build(BuildContext context) {
